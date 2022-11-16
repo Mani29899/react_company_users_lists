@@ -1,0 +1,195 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.company-holder{
+  background-color: #e6e6e6;
+  height: 100vh;
+  position:relative;
+  width: 100%;
+}
+
+
+.header-content{
+  /* margin: 20px;
+  padding: 15px; */
+  padding: 20px
+}
+
+.heading h3{
+  color: #6ca329;
+  font-size: 24px;
+}
+
+.heading-title{
+  margin-top: 10px;
+  padding:15px;
+
+}
+
+.title-text{
+  color: #666;
+  font-weight: 500;
+}
+
+.add-company{
+  background-color: #6ca329 !important;
+}
+
+.body-content{
+  display: flex;
+  flex-wrap: wrap !important;
+  padding: 0px 30px 30px 30px;
+  max-height: 300px;
+  height: fit-content;
+  overflow: auto;
+  justify-content: space-around;
+}
+
+.company-list-title{
+  padding: 0px 30px 2px 30px;
+}
+
+.list-text{
+margin-left: 3px;
+color: #666;
+font-size: 18px;
+}
+
+.image-edit{
+  height: 200px;
+  object-fit: cover
+}
+
+.card-space{
+  margin: 20px 0px;
+}
+
+
+.options-handling{
+  display: flex;
+}
+.mange-user{
+  margin: 10px;
+  flex-grow: 5;
+}
+.view-company{
+  padding: 0 10px;
+  margin: 10px;
+  background-color: #fa4727 !important;
+}
+
+.delete-company{
+  padding: 0 10px;
+  margin: 10px;
+  background-color: red !important;
+}
+
+.edit-company{
+  padding: 0 10px;
+  margin: 10px;
+  background-color: #7315f2 !important;
+}
+
+.form-holder{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  background-color: #666;
+}
+
+.form-content-holder{
+  background-color: white;
+}
+
+.create-company-style{
+  display: flex;
+}
+
+.create-company{
+  flex-grow: 3;
+  padding: 10px;
+  margin: 10px;
+}
+
+.create-company-goback{
+  padding: 10px;
+  margin: 10px;
+  flex-grow: 1;
+}
+
+
+.user-container-holder{
+  height: 100vh;
+  position:relative;
+  width:100%;
+  background-color: #e6e6e6;
+}
+
+.row{
+  margin: 0 !important;
+}
+
+.user-list-title{
+  padding: 10px;
+}
+
+.user-list-title h5{
+  color:#7315f2
+}
+
+.card-space-user{
+  box-shadow:rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  padding: 7px;
+  margin: 20px;
+}
+
+.card-flex p{
+  font-weight: 600;
+}
+
+.card-flex span{
+  font-weight: 500;
+  position: relative;
+  top: -12px;
+  color: #666;
+}
+
+.icons-handling{
+  display: flex;
+  justify-content: flex-end;
+  margin: 0px 30px;
+  padding: 0px 15px;
+}
+
+.userAddIcon{
+margin:0px 15px;
+font-size: 30px;
+color:#7315f2;
+cursor: pointer;
+}
+
+.userEditIcon{
+margin:0px 15px;
+font-size: 30px;
+color:#fa4727;
+cursor: pointer;
+}
+
+.userDeleteIcon{
+margin:0px 15px;
+font-size: 30px;
+color: red;
+cursor: pointer;
+}
+
+.userActiveIcon{
+margin-left:10px;
+font-size: 30px;
+color: #6ca329;
+cursor: pointer;
+}
