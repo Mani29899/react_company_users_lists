@@ -1,7 +1,21 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { toast ,ToastContainer} from "react-toastify";
+import { doPost } from "./Service";
 const ViewCompany = () => {
+  const [companyInfo ,setCompanyInfo] = useState();
+  const {id} =useParams();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    let params = {
+      id:id
+    }
+    doPost("companies/list/id" ,params).then((res) => {
+      toast.success('Info About Company')
+      setCompanyInfo(res.response)
+    });
+  }, []);
 
   const handleGoBack = () => {
     navigate('/')
@@ -23,6 +37,8 @@ const ViewCompany = () => {
                     class="form-control"
                     id="exampleFormControlInput1"
                     placeholder="companyName"
+                    value={companyInfo?.companyName}
+                    readOnly={true}
                   />
                 </div>
                 <div class="mb-3">
@@ -34,6 +50,8 @@ const ViewCompany = () => {
                     class="form-control"
                     id="exampleFormControlInput1"
                     placeholder="Company address"
+                    value={companyInfo?.companyAddress}
+                    readOnly={true}
                   />
                 </div>
                 <div class="mb-3">
@@ -46,6 +64,7 @@ const ViewCompany = () => {
                     id="exampleFormControlInput1"
                     placeholder="latitude"
                     readOnly={true}
+                    value={companyInfo?.latitude}
                   />
                 </div>
                 <div class="mb-3">
@@ -58,6 +77,7 @@ const ViewCompany = () => {
                     id="exampleFormControlInput1"
                     placeholder="longitude"
                     readOnly={true}
+                    value={companyInfo?.longitude}
                   />
                 </div>
               </p>
@@ -73,6 +93,7 @@ const ViewCompany = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

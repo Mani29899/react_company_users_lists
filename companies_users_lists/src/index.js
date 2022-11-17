@@ -4,51 +4,54 @@ import './index.css';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import {createBrowserRouter ,RouterProvider ,Route} from 'react-router-dom'
+import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom'
 import Userlist from './userList';
 import AddCompany from './addCompany';
 import ViewCompany from './viewCompany';
-import EditCompany from './EditCompany';
+import EditCompany from './editCompany';
 import Adduser from './addUser';
 import Edituser from './editUser';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const router = createBrowserRouter([
   {
-    path:'/',
-    element:<App />
+    path: '/',
+    element: <App />
   },
   {
-    path:'/add/company',
-    element:<AddCompany />
+    path: '/add/company',
+    element: <AddCompany />
   },
   {
-    path:'/view/company',
-    element:<ViewCompany />
+    path: '/view/company/:id',
+    element: <ViewCompany />
   },
   {
-    path:'/edit/company',
-    element:<EditCompany />
+    path: '/edit/company/:id',
+    element: <EditCompany />
   },
   {
-    path:'/users',
-    element:<Userlist />
+    path: '/users/:id',
+    element: <Userlist />
   },
   {
-    path:'/users/add',
-    element:<Adduser />
+    path: '/users/:id/add',
+    element: <Adduser />
   },
   {
-    path:'/users/edit',
-    element:<Edituser />
+    path: '/users/:company_id/edit/:id',
+    element: <Edituser />
   }
 ])
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
   </React.StrictMode>
 );
 
